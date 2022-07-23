@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+        <title>Sudoku Demo</title>
+
+        <link rel="stylesheet" href="sudoku.css">
+        <script src="sudoku.js"></script>
+    </head>
+
+    <body>
+        <div><img src="./logo.png" alt="logo"></div>
+        <!--difficulty selector-->
+        <div class="gameMode">
+            <ul>
+                <li><a class="diffbtn active borderL" href="./sudoku-demo.html">Demo</a></li>
+                <li><a class="diffbtn" href="./sudoku-easy.html">Easy</a></li>
+                <li><a class="diffbtn" href="./sudoku-median.html">Median</a></li>
+                <li><a class="diffbtn" href="./sudoku-hard.html">Hard</a></li>
+                <li><a class="diffbtn borderR" href="./sudoku-expert.html">Expert</a></li>
+            </ul>
+        </div>
+        <p>Demo will only remove five number 1 cell</p>
+        <p>Only correct number will show up in board</p>
+        <!--create game board in sudoku div-->
+        <div id="sudoku"></div>
+        <p>Select number first in number bar below to start playing</p>
+        <!--create nuber button in numberBar div-->
+        <div id="numberBar"></div>
+        <div><a id="howTo" href="https://sudoku.com/how-to-play/sudoku-rules-for-complete-beginners/">How to Play</a></div>
+
+        <!--use for game load-->
+        <script>
+            window.onload = function() {
+                setBoard('demo');
+                createNumBar();
+            }
+        </script>
+    </body>
+</html>

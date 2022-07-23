@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+        <title>Sudoku Median</title>
+
+        <link rel="stylesheet" href="sudoku.css">
+        <script src="sudoku.js"></script>
+    </head>
+
+    <body>
+        <div><img src="./logo.png" alt="logo"></div>
+        <!--difficulty selector-->
+        <div class="gameMode">
+            <ul>
+                <li><a class="diffbtn" href="./sudoku-demo.html">Demo</a></li>
+                <li><a class="diffbtn" href="./sudoku-easy.html">Easy</a></li>
+                <li><a class="diffbtn active" href="./sudoku-median.html">Median</a></li>
+                <li><a class="diffbtn" href="./sudoku-hard.html">Hard</a></li>
+                <li><a class="diffbtn" href="./sudoku-expert.html">Expert</a></li>
+            </ul>
+        </div>
+        <!--create game board in sudoku div-->
+        <div id="sudoku"></div>
+        <!--create nuber button in numberBar div-->
+        <div id="numberBar"></div>
+        <div><a id="howTo" href="https://sudoku.com/how-to-play/sudoku-rules-for-complete-beginners/">How to Play</a></div>
+
+        <!--use for game load-->
+        <script>
+            window.onload = function() {
+                setBoard('median');
+                createNumBar();
+            }
+        </script>
+    </body>
+</html>
